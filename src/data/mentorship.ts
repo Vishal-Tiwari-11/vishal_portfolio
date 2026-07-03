@@ -5,6 +5,7 @@ export interface MentorshipProject {
   tags: string[];
   gradient: string;
   accentColor: string;
+  liveUrl?: string;
 }
 
 export const mentorshipProjects: MentorshipProject[] = [

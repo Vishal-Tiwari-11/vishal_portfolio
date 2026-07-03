@@ -92,7 +92,7 @@ export function CursorSpotlight() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   const [visible, setVisible] = useState(false);
-  const [curState, setCurState] = useState<CursorState>('default');
+  const [, setCurState] = useState<CursorState>('default');
   const curStateRef = useRef<CursorState>('default');
   const mouseRef = useRef({ x: 0, y: 0 });
   const outerPosRef = useRef({ x: 0, y: 0 });
