@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light dark;
+  }
+
+  /* Hide default cursor on desktop when custom cursor is active */
+  @media (pointer: fine) and (min-width: 1024px) {
+    *, *::before, *::after {
+      cursor: none !important;
+    }
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  body {
+    @apply bg-paper-bg text-paper-text dark:bg-ink-bg dark:text-ink-text font-body antialiased;
+    font-feature-settings: 'cv11', 'ss01';
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display tracking-tight;
+  }
+
+  /* Visible keyboard focus, always */
+  :focus-visible {
+    @apply outline-none ring-2 ring-brand-400 ring-offset-2 ring-offset-paper-bg dark:ring-offset-ink-bg rounded-sm;
+  }
+
+  ::selection {
+    @apply bg-brand-400/30 text-inherit;
+  }
+
+  /* Slim, theme-aware scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-paper-border dark:bg-ink-border rounded-full;
+  }
+}
+
+@layer components {
+  .skip-link {
+    @apply sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:rounded-md focus:bg-brand-500 focus:px-4 focus:py-2 focus:text-white focus:text-sm focus:font-medium;
+  }
+
+  .container-page {
+    @apply mx-auto w-full max-w-6xl px-5 sm:px-8;
+  }
+
+  .eyebrow {
+    @apply font-mono text-xs uppercase tracking-[0.2em] text-brand-500 dark:text-brand-400;
+  }
+
+  .card-surface {
+    @apply rounded-xl border border-paper-border bg-paper-surface dark:border-ink-border dark:bg-ink-surface;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg bg-brand-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-all duration-200 hover:bg-brand-600 hover:-translate-y-0.5 active:translate-y-0;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg border border-paper-border bg-transparent px-5 py-2.5 text-sm font-semibold text-paper-text transition-all duration-200 hover:border-brand-400 hover:-translate-y-0.5 active:translate-y-0 dark:border-ink-border dark:text-ink-text;
+  }
+
+  .tag-chip {
+    @apply inline-flex items-center gap-1.5 rounded-md border border-paper-border bg-paper-elevated px-2.5 py-1 font-mono text-xs text-paper-muted dark:border-ink-border dark:bg-ink-elevated dark:text-ink-muted;
+  }
+
+  /* Reveal-on-scroll animation primitive used by <Animated /> */
+  .reveal {
+    opacity: 0;
+  }
+  .reveal-up {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  .reveal-scale {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  .reveal.is-visible {
+    animation: fade-in 0.7s ease-out forwards;
+  }
+  .reveal-up.is-visible {
+    animation: fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+  .reveal-scale.is-visible {
+    animation: scale 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+}
