@@ -159,7 +159,7 @@ export function Hero() {
           </div>
 
           {/* Floating tech badges */}
-          <div
+          {/* <div
             aria-hidden="true"
             className="absolute -right-4 -top-4 hidden rotate-3 rounded-lg border border-ink-border bg-ink-elevated px-3 py-1.5 font-mono text-xs text-brand-400 shadow-lg sm:block"
           >
@@ -170,7 +170,7 @@ export function Hero() {
             className="absolute -bottom-4 -left-4 hidden -rotate-2 rounded-lg border border-ink-border bg-ink-elevated px-3 py-1.5 font-mono text-xs text-brand-400 shadow-lg sm:block"
           >
             PHP · MySQL
-          </div>
+          </div> */}
         </Animated>
       </div>
 
