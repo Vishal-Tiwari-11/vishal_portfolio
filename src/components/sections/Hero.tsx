@@ -1,6 +1,7 @@
 import { ArrowDown, ArrowRight, Linkedin, Github } from 'lucide-react';
 import { Animated } from '@/components/ui/Animated';
 import { socialLinks } from '@/data/socials';
+import { HeroBackground } from '@/components/ui/HeroBackground';
 
 const githubLink = socialLinks.find((link) => link.label === 'GitHub');
 const linkedinLink = socialLinks.find((link) => link.label === 'LinkedIn');
@@ -12,22 +13,10 @@ export function Hero() {
       aria-label="Introduction"
       className="relative flex min-h-screen items-center overflow-hidden pt-24 pb-16"
     >
-      {/* Diamond grid background */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 bg-grid-pattern bg-grid opacity-100 dark:opacity-100"
-        style={{ backgroundPosition: '20px 20px' }}
-      />
-      {/* 3D perspective depth lines — horizontal */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 opacity-[0.03] dark:opacity-[0.06]"
-        style={{
-          backgroundImage: 'linear-gradient(to bottom, transparent 49%, rgb(61 107 253) 49%, rgb(61 107 253) 51%, transparent 51%)',
-          backgroundSize: '100% 80px',
-        }}
-      />
-      {/* Ambient glow */}
+      {/* Animated 3D diamond background */}
+      <HeroBackground />
+
+      {/* Top glow */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 bg-glow-radial opacity-40 dark:opacity-100"
