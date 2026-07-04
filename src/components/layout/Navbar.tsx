@@ -99,7 +99,7 @@ export function Navbar() {
       <div
         id="mobile-menu"
         className={`overflow-hidden border-b border-paper-border bg-paper-bg transition-[max-height] duration-300 dark:border-ink-border dark:bg-ink-bg md:hidden ${
-          isMenuOpen ? 'max-h-96' : 'max-h-0'
+          isMenuOpen ? 'max-h-[600px]' : 'max-h-0'
         }`}
       >
         <ul className="container-page flex flex-col gap-1 py-3">
@@ -114,8 +114,16 @@ export function Navbar() {
               </a>
             </li>
           ))}
-          <li className="pt-2">
-            <a href="#contact" onClick={handleLinkClick} className="btn-primary w-full">
+          <li className="flex flex-col gap-2 border-t border-paper-border pt-3 dark:border-ink-border">
+            <button
+              type="button"
+              onClick={() => { generateResume(); setIsMenuOpen(false); }}
+              className="inline-flex items-center justify-center gap-1.5 rounded-lg border border-paper-border px-3 py-2.5 text-sm font-medium text-paper-text dark:border-ink-border dark:text-ink-text"
+            >
+              <Download className="h-3.5 w-3.5" aria-hidden="true" />
+              Download Resume
+            </button>
+            <a href="#contact" onClick={handleLinkClick} className="btn-primary w-full text-center">
               Let&apos;s talk
             </a>
           </li>

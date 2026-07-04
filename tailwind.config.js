@@ -41,12 +41,13 @@ export default {
       },
       backgroundImage: {
         'grid-pattern':
-          'linear-gradient(to right, rgb(61 107 253 / 0.07) 1px, transparent 1px), linear-gradient(to bottom, rgb(61 107 253 / 0.07) 1px, transparent 1px)',
+          // Rotated diamond grid with perspective-style shading for 3D effect
+          'linear-gradient(135deg, rgb(61 107 253 / 0.06) 25%, transparent 25%), linear-gradient(225deg, rgb(61 107 253 / 0.06) 25%, transparent 25%), linear-gradient(315deg, rgb(61 107 253 / 0.06) 25%, transparent 25%), linear-gradient(45deg, rgb(61 107 253 / 0.06) 25%, transparent 25%)',
         'glow-radial':
           'radial-gradient(circle at 50% 0%, rgb(61 107 253 / 0.18), transparent 60%)',
       },
       backgroundSize: {
-        grid: '38px 38px',
+        grid: '40px 40px',
       },
       keyframes: {
         blink: {

@@ -10,12 +10,27 @@ export function Hero() {
     <section
       id="home"
       aria-label="Introduction"
-      className="relative flex min-h-screen items-center overflow-hidden bg-grid-pattern bg-grid pt-24 pb-16"
+      className="relative flex min-h-screen items-center overflow-hidden pt-24 pb-16"
     >
-      {/* Ambient glow, decorative only */}
+      {/* Diamond grid background */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 bg-glow-radial dark:opacity-100 opacity-40"
+        className="pointer-events-none absolute inset-0 bg-grid-pattern bg-grid opacity-100 dark:opacity-100"
+        style={{ backgroundPosition: '20px 20px' }}
+      />
+      {/* 3D perspective depth lines — horizontal */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 opacity-[0.03] dark:opacity-[0.06]"
+        style={{
+          backgroundImage: 'linear-gradient(to bottom, transparent 49%, rgb(61 107 253) 49%, rgb(61 107 253) 51%, transparent 51%)',
+          backgroundSize: '100% 80px',
+        }}
+      />
+      {/* Ambient glow */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 bg-glow-radial opacity-40 dark:opacity-100"
       />
 
       <div className="container-page relative grid items-center gap-14 lg:grid-cols-[1.1fr_1fr]">

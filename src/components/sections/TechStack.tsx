@@ -17,7 +17,7 @@ export function TechStack() {
           align="center"
         />
 
-        <ul className="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-5">
+        <ul className="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
           {techStack.map((tech, index) => (
             <Animated
               key={tech.name}

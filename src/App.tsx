@@ -5,6 +5,7 @@ import { Hero } from '@/components/sections/Hero';
 import { About } from '@/components/sections/About';
 import { ScrollProgress } from '@/components/ui/ScrollProgress';
 import { CursorSpotlight } from '@/components/ui/CursorSpotlight';
+import { ScrollToTop } from '@/components/ui/ScrollToTop';
 
 // Below-the-fold sections are code-split so the initial bundle stays lean —
 // they're requested only as the user scrolls toward them.
@@ -44,6 +45,7 @@ function App() {
     <>
       <ScrollProgress />
       <CursorSpotlight />
+      <ScrollToTop />
       <a href="#main-content" className="skip-link">
         Skip to main content
       </a>

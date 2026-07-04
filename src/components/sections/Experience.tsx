@@ -22,7 +22,7 @@ export function Experience() {
           description="From building cross-browser client sites to shipping payment-integrated university platforms — three roles, one consistent focus on reliable software."
         />
 
-        <ol className="relative mt-12 flex flex-col gap-6 border-l border-paper-border pl-8 dark:border-ink-border sm:pl-10">
+        <ol className="relative mt-12 flex flex-col gap-6 border-l border-paper-border pl-6 dark:border-ink-border sm:pl-10">
           {experience.map((item, index) => {
             const isOpen = openIndex === index;
 
@@ -31,7 +31,7 @@ export function Experience() {
                 {/* Timeline dot */}
                 <span
                   aria-hidden="true"
-                  className={`absolute -left-[2.45rem] top-3 flex h-4 w-4 items-center justify-center rounded-full border-2 transition-colors duration-200 sm:-left-[2.95rem] ${
+                  className={`absolute -left-[1.85rem] top-3 flex h-4 w-4 items-center justify-center rounded-full border-2 transition-colors duration-200 sm:-left-[2.95rem] ${
                     isOpen
                       ? 'border-brand-500 bg-brand-500'
                       : 'border-brand-500 bg-paper-surface dark:bg-ink-surface'
@@ -52,7 +52,7 @@ export function Experience() {
                       <p className="font-mono text-xs font-medium uppercase tracking-wider text-brand-500 dark:text-brand-400">
                         {item.period}
                       </p>
-                      <h3 className="mt-1 text-xl font-semibold text-paper-text dark:text-ink-text group-hover:text-brand-500 dark:group-hover:text-brand-400 transition-colors">
+                      <h3 className="mt-1 text-lg font-semibold text-paper-text dark:text-ink-text group-hover:text-brand-500 dark:group-hover:text-brand-400 transition-colors sm:text-xl">
                         {item.role}
                       </h3>
                       <p className="text-sm font-medium text-paper-muted dark:text-ink-muted">
@@ -71,7 +71,7 @@ export function Experience() {
                 {/* Collapsible body */}
                 <div
                   className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                    isOpen ? 'max-h-[600px] opacity-100' : 'max-h-0 opacity-0'
+                    isOpen ? 'max-h-[800px] opacity-100' : 'max-h-0 opacity-0'
                   }`}
                 >
                   <div className="pt-3">
