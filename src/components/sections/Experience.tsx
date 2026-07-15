@@ -19,7 +19,7 @@ export function Experience() {
         <SectionHeader
           eyebrow="Experience"
           title="Where I've worked"
-          description="From building cross-browser client sites to shipping payment-integrated university platforms — three roles, one consistent focus on reliable software."
+          description="From co-founding a programming institute to shipping payment-integrated university platforms — four roles, one consistent focus on reliable software."
         />
 
         <ol className="relative mt-12 flex flex-col gap-6 border-l border-paper-border pl-6 dark:border-ink-border sm:pl-10">

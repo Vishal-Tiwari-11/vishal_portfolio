@@ -27,8 +27,10 @@ export function generateResume() {
       <div class="proj-head">
         <span class="proj-name">${p.title}</span>
         <span class="badge">${p.category}</span>
+        ${p.liveUrl ? `<a class="proj-url" href="${p.liveUrl}">${p.liveUrl}</a>` : ''}
       </div>
-      ${p.liveUrl ? `<div class="proj-url">${p.liveUrl}</div>` : ''}
+      <div class="proj-desc">${p.description}</div>
+      <ul>${p.highlights.map((h) => `<li>${h}</li>`).join('')}</ul>
       <div class="tags">${p.stack.join(' · ')}</div>
     </div>
   `).join('');
@@ -38,7 +40,10 @@ export function generateResume() {
       <div class="proj-head">
         <span class="proj-name">${m.title}</span>
         <span class="badge mentor">Mentorship</span>
+        ${m.liveUrl ? `<a class="proj-url" href="${m.liveUrl}">${m.liveUrl}</a>` : ''}
       </div>
+      <div class="proj-desc">${m.description}</div>
+      <ul>${m.highlights.map((h) => `<li>${h}</li>`).join('')}</ul>
       <div class="tags">${m.tags.join(' · ')}</div>
     </div>
   `).join('');
@@ -131,8 +136,8 @@ export function generateResume() {
 
     /* ── PROJECTS GRID ── */
     .proj-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      display: flex;
+      flex-direction: column;
       gap: 8px;
     }
     .proj-item { 
@@ -150,7 +155,8 @@ export function generateResume() {
       border-radius: 999px; padding: 1px 6px; font-weight: 600; flex-shrink: 0;
     }
     .badge.mentor { background: #10b981; }
-    .proj-url { font-size: 8.5px; color: #3D6BFD; }
+    .proj-url { font-size: 8.5px; color: #3D6BFD; margin-left: auto; text-decoration: none; }
+    .proj-desc { font-size: 9.5px; color: #475569; margin-top: 2px; line-height: 1.5; }
 
     /* ── EDUCATION ── */
     .edu-block { margin-bottom: 10px; padding-bottom: 10px; border-bottom: 1px dashed #e8edf5; }
