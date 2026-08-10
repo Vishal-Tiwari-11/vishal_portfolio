@@ -27,7 +27,7 @@ export function useActiveSection(sectionIds: string[]): string {
       {
         // Bias toward the upper portion of the viewport, matching the sticky navbar offset
         rootMargin: '-15% 0px -65% 0px',
-        threshold: [0, 0.25, 0.5, 0.75, 1],
+        threshold: [0, 0.25],
       },
     );
 

@@ -26,12 +26,12 @@ export default {
           text: '#E7ECF7',
         },
         paper: {
-          bg: '#F6F8FC',
+          bg: '#FFFFFF',
           surface: '#FFFFFF',
-          elevated: '#EEF2FA',
-          border: '#DEE5F2',
-          muted: '#5B6679',
-          text: '#0E1525',
+          elevated: '#F9FAFB',
+          border: '#E5E7EB',
+          muted: '#6B7280',
+          text: '#111827',
         },
       },
       fontFamily: {

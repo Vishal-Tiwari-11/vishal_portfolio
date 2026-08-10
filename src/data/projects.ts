@@ -2,6 +2,22 @@ import type { ProjectItem } from '@/types';
 
 export const projects: ProjectItem[] = [
   {
+    title: 'Centre for Leadership & Enterprise',
+    category: 'Web',
+    description:
+      'Web platform for JECRC University in partnership with Centre for Leadership & Enterprise and Chhatra Sansad India — empowering India’s next generation of student leaders.',
+    highlights: [
+      'Empowers student leaders through a campus-embedded leadership program with monthly themes & deliverables',
+      'Simple, user-friendly application form for student registration and cohort onboarding',
+      'Dedicated admin dashboard for university staff to review, manage, and filter incoming applications',
+      'Built full-stack web system using JavaScript, PHP, MySQL, and CSS for fast and secure data management',
+    ],
+    stack: ['PHP', 'MySQL', 'JavaScript', 'CSS3'],
+    gradient: 'from-amber-500 via-rose-500 to-brand-500',
+    accentColor: '#f43f5e',
+    liveUrl: "https://cle.jecrcuniversity.edu.in/",
+  },
+  {
     title: 'Reimagine by Dhruvi',
     category: 'Payments',
     description:

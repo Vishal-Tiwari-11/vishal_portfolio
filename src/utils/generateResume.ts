@@ -186,7 +186,7 @@ export function generateResume() {
   <div class="hd">
     <div>
       <div class="hd-name">Vishal Tiwari</div>
-      <div class="hd-role">Web &amp; ERP Developer</div>
+      <div class="hd-role">Web Developer</div>
       <div class="hd-loc">Jaipur, Rajasthan, India</div>
     </div>
     <div class="hd-contact">

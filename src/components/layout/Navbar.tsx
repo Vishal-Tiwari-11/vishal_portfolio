@@ -98,8 +98,8 @@ export function Navbar() {
       {/* Mobile nav */}
       <div
         id="mobile-menu"
-        className={`overflow-hidden border-b border-paper-border bg-paper-bg transition-[max-height] duration-300 dark:border-ink-border dark:bg-ink-bg md:hidden ${
-          isMenuOpen ? 'max-h-[600px]' : 'max-h-0'
+        className={`overflow-y-auto border-b border-paper-border bg-paper-bg transition-[max-height] duration-300 dark:border-ink-border dark:bg-ink-bg md:hidden ${
+          isMenuOpen ? 'max-h-[calc(100vh-4rem)]' : 'max-h-0'
         }`}
       >
         <ul className="container-page flex flex-col gap-1 py-3">

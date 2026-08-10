@@ -16,6 +16,11 @@
 
   html {
     scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+    max-width: 100vw;
+    width: 100%;
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -33,15 +38,18 @@
   }
 
   body {
-    @apply bg-paper-bg text-paper-text dark:bg-ink-bg dark:text-ink-text font-body antialiased;
+    @apply bg-paper-bg text-paper-text dark:bg-ink-bg dark:text-ink-text font-body antialiased transition-colors duration-300;
     font-feature-settings: 'cv11', 'ss01';
+    overflow-x: hidden;
+    max-width: 100vw;
+    width: 100%;
   }
 
   h1,
   h2,
   h3,
   h4 {
-    @apply font-display tracking-tight;
+    @apply font-display tracking-tight break-words;
   }
 
   /* Visible keyboard focus, always */
@@ -61,7 +69,7 @@
     @apply bg-transparent;
   }
   ::-webkit-scrollbar-thumb {
-    @apply bg-paper-border dark:bg-ink-border rounded-full;
+    @apply bg-paper-border dark:bg-ink-border rounded-full hover:bg-brand-400/60 transition-colors;
   }
 }
 
@@ -71,27 +79,27 @@
   }
 
   .container-page {
-    @apply mx-auto w-full max-w-6xl px-5 sm:px-8;
+    @apply mx-auto w-full max-w-6xl min-w-0 px-4 sm:px-8 overflow-hidden;
   }
 
   .eyebrow {
-    @apply font-mono text-xs uppercase tracking-[0.2em] text-brand-500 dark:text-brand-400;
+    @apply font-mono text-xs uppercase tracking-wider sm:tracking-[0.2em] text-brand-600 dark:text-brand-400 max-w-full;
   }
 
   .card-surface {
-    @apply rounded-xl border border-paper-border bg-paper-surface dark:border-ink-border dark:bg-ink-surface;
+    @apply rounded-xl border border-paper-border bg-paper-surface/95 backdrop-blur-sm shadow-sm shadow-slate-200/50 transition-all duration-300 hover:border-brand-500/40 hover:shadow-xl hover:shadow-brand-500/10 dark:border-ink-border dark:bg-ink-surface/90 dark:shadow-none;
   }
 
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 rounded-lg bg-brand-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-all duration-200 hover:bg-brand-600 hover:-translate-y-0.5 active:translate-y-0;
+    @apply inline-flex items-center justify-center gap-2 rounded-lg bg-brand-500 px-5 py-2.5 text-sm font-semibold text-white shadow-md shadow-brand-500/25 transition-all duration-200 hover:bg-brand-600 hover:shadow-lg hover:shadow-brand-500/35 hover:-translate-y-0.5 active:translate-y-0;
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center gap-2 rounded-lg border border-paper-border bg-transparent px-5 py-2.5 text-sm font-semibold text-paper-text transition-all duration-200 hover:border-brand-400 hover:-translate-y-0.5 active:translate-y-0 dark:border-ink-border dark:text-ink-text;
+    @apply inline-flex items-center justify-center gap-2 rounded-lg border border-paper-border bg-white px-5 py-2.5 text-sm font-semibold text-paper-text shadow-sm transition-all duration-200 hover:border-brand-500 hover:text-brand-600 hover:bg-slate-50 hover:-translate-y-0.5 active:translate-y-0 dark:border-ink-border dark:bg-ink-surface/60 dark:text-ink-text dark:hover:bg-ink-elevated dark:hover:text-ink-text;
   }
 
   .tag-chip {
-    @apply inline-flex items-center gap-1.5 rounded-md border border-paper-border bg-paper-elevated px-2.5 py-1 font-mono text-xs text-paper-muted dark:border-ink-border dark:bg-ink-elevated dark:text-ink-muted;
+    @apply inline-flex items-center gap-1.5 rounded-md border border-paper-border bg-paper-elevated px-2.5 py-1 font-mono text-xs text-paper-muted transition-colors duration-200 hover:border-brand-500/40 dark:border-ink-border dark:bg-ink-elevated dark:text-ink-muted;
   }
 
   /* Reveal-on-scroll animation primitive used by <Animated /> */

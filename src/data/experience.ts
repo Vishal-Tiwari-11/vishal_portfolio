@@ -2,7 +2,7 @@ import type { ExperienceItem } from "@/types";
 
 export const experience: ExperienceItem[] = [
   {
-    role: "Web & ERP Developer",
+    role: "Programmer",
     company: "JECRC University",
     period: "Oct 2024 — Present",
     summary:
@@ -12,7 +12,7 @@ export const experience: ExperienceItem[] = [
       "Developed 4 international conference websites (ICETACQ, IAMSSG-2025) serving 1,000+ global delegates with 99.9% uptime",
       "Built the R&D Cell website using Next.js, achieving 95+ Lighthouse performance score and reducing page load time by 60%",
       "Delivered the JU Service & Grievance Portal (Single Window System) serving 3,000+ students, replacing 8 fragmented service touchpoints",
-      "Mentors 3+ interns at JECRC's AI program on production-ready projects including JU Bot (serving 2,000+ students), AI-Powered HR Portal, and university automation tools",
+      "Mentors 3+ interns at JECRC's AI program on production-ready projects including JU Bot (an AI admissions & course fee assistant on the application portal), AI-Powered HR Portal, and university automation tools",
     ],
     stack: [
       "PHP (PDO)",
@@ -38,29 +38,29 @@ export const experience: ExperienceItem[] = [
     stack: ["HTML5", "CSS3", "JavaScript", "PHP", "MySQL"],
   },
   {
-    role: 'Software Engineer',
-    company: 'Cosmo Infomatics Pvt. Ltd.',
-    period: 'May 2023 — Mar 2024',
+    role: "Software Engineer",
+    company: "Cosmo Infomatics Pvt. Ltd.",
+    period: "May 2023 — Mar 2024",
     summary:
-      'Built responsive, cross-browser websites and integrated third-party APIs for client projects, with a focus on performance optimisation and user experience.',
+      "Built responsive, cross-browser websites and integrated third-party APIs for client projects, with a focus on performance optimisation and user experience.",
     achievements: [
-      'Delivered 10+ responsive, cross-browser-compatible client websites using HTML5, CSS3, Bootstrap, and JavaScript, achieving 95%+ browser compatibility',
-      'Integrated 5+ third-party APIs (payment gateways, analytics, CRM) extending platform functionality across multiple client projects',
-      'Improved average site performance by 40% through auditing, code optimization, and modern best practices implementation',
+      "Delivered 10+ responsive, cross-browser-compatible client websites using HTML5, CSS3, Bootstrap, and JavaScript, achieving 95%+ browser compatibility",
+      "Integrated 5+ third-party APIs (payment gateways, analytics, CRM) extending platform functionality across multiple client projects",
+      "Improved average site performance by 40% through auditing, code optimization, and modern best practices implementation",
     ],
-    stack: ['HTML5', 'CSS3', 'Bootstrap', 'JavaScript', 'REST APIs'],
+    stack: ["HTML5", "CSS3", "Bootstrap", "JavaScript", "REST APIs"],
   },
   {
-    role: 'Programming Instructor & Co-Founder',
-    company: 'MS Computer Education and Training Institute',
-    period: 'Jul 2021 — Mar 2022',
+    role: "Programming Instructor & Co-Founder",
+    company: "MS Computer Education and Training Institute",
+    period: "Jul 2021 — Mar 2023",
     summary:
-      'Co-founded and operated a computer education institute in Agra, teaching programming languages and foundational software skills to students before the institute was closed.',
+      "Co-founded and operated a computer education institute in Agra, teaching programming languages and foundational software skills to students before the institute was closed.",
     achievements: [
-      'Co-founded the institute with 2 partners, handling curriculum design, scheduling, and day-to-day operations',
-      'Taught C, Python, Java, HTML, CSS, and JavaScript to batches of students across beginner and intermediate levels',
-      'Designed structured course modules covering core programming concepts from scratch to intermediate level',
+      "Co-founded the institute with 2 partners, handling curriculum design, scheduling, and day-to-day operations",
+      "Taught C, Python, Java, HTML, CSS, and JavaScript to batches of students across beginner and intermediate levels",
+      "Designed structured course modules covering core programming concepts from scratch to intermediate level",
     ],
-    stack: ['C', 'Python', 'Java', 'HTML', 'CSS', 'JavaScript', 'Teaching'],
+    stack: ["C", "Python", "Java", "HTML", "CSS", "JavaScript", "Teaching"],
   },
 ];

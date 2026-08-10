@@ -26,11 +26,11 @@ export function SectionHeader({
         <span aria-hidden="true" className="h-px w-6 bg-brand-500/70" />
         {eyebrow}
       </span>
-      <h2 className="text-3xl sm:text-4xl font-semibold text-paper-text dark:text-ink-text">
+      <h2 className="text-2xl font-bold break-words sm:text-3xl md:text-4xl bg-gradient-to-br from-paper-text to-paper-muted bg-clip-text text-transparent dark:from-ink-text dark:to-ink-muted">
         {title}
       </h2>
       {description && (
-        <p className="text-base text-paper-muted dark:text-ink-muted leading-relaxed">
+        <p className="text-sm text-paper-muted break-words leading-relaxed dark:text-ink-muted sm:text-base">
           {description}
         </p>
       )}

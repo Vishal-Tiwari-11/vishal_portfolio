@@ -13,7 +13,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
 
   return (
     <article
-      className="group relative flex w-full flex-col overflow-hidden rounded-2xl border border-paper-border bg-paper-elevated transition-all duration-300 hover:shadow-lg dark:border-ink-border dark:bg-ink-elevated"
+      className="group relative flex w-full flex-col overflow-hidden rounded-2xl border border-paper-border bg-paper-surface transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-slate-200/50 dark:border-ink-border dark:bg-ink-surface dark:hover:shadow-none"
     >
       {/* Top accent line */}
       <span
@@ -22,19 +22,19 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
         style={{ background: `linear-gradient(to right, ${project.accentColor}, transparent 70%)` }}
       />
 
-      <div className="flex flex-1 flex-col gap-4 p-5">
+      <div className="flex flex-1 flex-col gap-4 p-5 min-w-0">
         {/* Row: number + category + link */}
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2.5">
+        <div className="flex items-center justify-between gap-2 min-w-0">
+          <div className="flex items-center gap-2.5 min-w-0">
             <span
-              className="font-mono text-2xl font-black leading-none tabular-nums"
+              className="font-mono text-2xl font-black leading-none tabular-nums flex-shrink-0"
               style={{ color: project.accentColor, opacity: 0.2 }}
               aria-hidden="true"
             >
               {num}
             </span>
             <span
-              className="rounded-full border px-2.5 py-0.5 font-mono text-[10px] font-semibold uppercase tracking-widest"
+              className="truncate rounded-full border px-2.5 py-0.5 font-mono text-[10px] font-semibold uppercase tracking-widest"
               style={{
                 borderColor: `${project.accentColor}40`,
                 color: project.accentColor,
@@ -50,7 +50,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
               target="_blank"
               rel="noreferrer noopener"
               aria-label={`View ${project.title} live`}
-              className="flex h-7 w-7 items-center justify-center rounded-lg border border-paper-border text-paper-muted transition-all duration-200 hover:border-brand-400 hover:text-brand-500 dark:border-ink-border dark:text-ink-muted dark:hover:border-brand-400 dark:hover:text-brand-400"
+              className="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-lg border border-paper-border text-paper-muted transition-all duration-200 hover:border-brand-400 hover:text-brand-500 dark:border-ink-border dark:text-ink-muted dark:hover:border-brand-400 dark:hover:text-brand-400"
             >
               <ArrowUpRight className="h-3.5 w-3.5" />
             </a>
@@ -58,12 +58,12 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
         </div>
 
         {/* Title */}
-        <h3 className="text-lg font-semibold leading-snug text-paper-text transition-colors duration-200 group-hover:text-brand-500 dark:text-ink-text dark:group-hover:text-brand-400">
+        <h3 className="text-lg font-semibold leading-snug text-paper-text break-words transition-colors duration-200 group-hover:text-brand-500 dark:text-ink-text dark:group-hover:text-brand-400">
           {project.title}
         </h3>
 
         {/* Description — flex-1 so it fills available space and pushes footer down */}
-        <p className="flex-1 text-sm leading-relaxed text-paper-muted dark:text-ink-muted">
+        <p className="flex-1 text-sm leading-relaxed text-paper-muted break-words dark:text-ink-muted">
           {project.description}
         </p>
 

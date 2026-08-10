@@ -22,29 +22,29 @@ export function Hero() {
         className="pointer-events-none absolute inset-0 bg-glow-radial opacity-40 dark:opacity-100"
       />
 
-      <div className="container-page relative grid items-center gap-14 lg:grid-cols-[1.1fr_1fr]">
+      <div className="container-page relative grid min-w-0 items-center gap-10 lg:gap-14 lg:grid-cols-[1.1fr_1fr]">
         {/* Copy column */}
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-6 min-w-0">
           <Animated variant="fade-up">
-            <span className="eyebrow inline-flex items-center gap-2 rounded-full border border-paper-border bg-paper-surface px-3 py-1 dark:border-ink-border dark:bg-ink-surface">
-              <span className="relative flex h-2 w-2">
+            <span className="eyebrow inline-flex max-w-full items-center gap-2 rounded-full border border-paper-border bg-paper-surface px-3 py-1 text-[11px] sm:text-xs dark:border-ink-border dark:bg-ink-surface">
+              <span className="relative flex h-2 w-2 flex-shrink-0">
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
               </span>
-              Open to new opportunities
+              <span className="truncate">Open to new opportunities</span>
             </span>
           </Animated>
 
           <Animated variant="fade-up" delayMs={80}>
-            <h1 className="text-4xl font-semibold leading-[1.1] text-paper-text dark:text-ink-text sm:text-5xl lg:text-6xl">
+            <h1 className="text-3xl font-semibold leading-[1.1] text-paper-text break-words dark:text-ink-text sm:text-5xl lg:text-6xl">
               Hi, I&apos;m{' '}
               <span className="text-brand-500 dark:text-brand-400">Vishal Tiwari</span>
-              <span className="block">Web &amp; ERP Developer</span>
+              <span className="block">Web Developer</span>
             </h1>
           </Animated>
 
           <Animated variant="fade-up" delayMs={160}>
-            <p className="max-w-xl text-base leading-relaxed text-paper-muted dark:text-ink-muted sm:text-lg">
+            <p className="max-w-xl text-base leading-relaxed text-paper-muted break-words dark:text-ink-muted sm:text-lg">
               I build reliable, payment-integrated web platforms — from university
               convocations to international conferences — where downtime isn&apos;t
               an option.
@@ -88,8 +88,8 @@ export function Hero() {
         </div>
 
         {/* Mock code editor */}
-        <Animated variant="scale" delayMs={200} className="relative mx-auto w-full max-w-md lg:max-w-none">
-          <div className="animate-float rounded-xl border border-ink-border bg-ink-surface shadow-2xl shadow-brand-900/20">
+        <Animated variant="scale" delayMs={200} className="relative mx-auto w-full max-w-md min-w-0 lg:max-w-none">
+          <div className="animate-float rounded-xl border border-ink-border bg-ink-surface shadow-2xl shadow-brand-900/20 overflow-hidden">
             <div className="flex items-center gap-1.5 border-b border-ink-border px-4 py-3">
               <span className="h-2.5 w-2.5 rounded-full bg-[#FF5F56]" />
               <span className="h-2.5 w-2.5 rounded-full bg-[#FFBD2E]" />
@@ -97,7 +97,7 @@ export function Hero() {
               <span className="ml-3 font-mono text-xs text-ink-muted">developer.ts</span>
             </div>
 
-            <pre className="overflow-x-auto px-5 py-5 font-mono text-[13px] leading-relaxed sm:text-sm">
+            <pre className="overflow-x-auto min-w-0 max-w-full px-4 py-4 font-mono text-[12px] leading-relaxed sm:px-5 sm:py-5 sm:text-sm">
               <code>
                 <span className="text-ink-muted">{'// vishal-tiwari/developer.ts'}</span>
                 {'\n\n'}
@@ -113,18 +113,20 @@ export function Hero() {
                 {'  '}
                 <span className="text-[#9CDCFE]">role</span>
                 <span className="text-ink-text">:</span>{' '}
-                <span className="text-[#CE9178]">&apos;Web &amp; ERP Developer&apos;</span>,
+                <span className="text-[#CE9178]">&apos;Web Developer&apos;</span>,
                 {'\n'}
                 {'  '}
                 <span className="text-[#9CDCFE]">location</span>
                 <span className="text-ink-text">:</span>{' '}
-                <span className="text-[#CE9178]">&apos;Jaipur, Rajasthan, India&apos;</span>,
+                <span className="text-[#CE9178]">&apos;Jaipur, India&apos;</span>,
                 {'\n'}
                 {'  '}
                 <span className="text-[#9CDCFE]">stack</span>
                 <span className="text-ink-text">:</span> [
                 <span className="text-[#CE9178]">&apos;React&apos;</span>,{' '}
-                <span className="text-[#CE9178]">&apos;Next.js&apos;</span>,{' '}
+                <span className="text-[#CE9178]">&apos;Next.js&apos;</span>,
+                {'\n'}
+                {'         '}
                 <span className="text-[#CE9178]">&apos;PHP&apos;</span>,{' '}
                 <span className="text-[#CE9178]">&apos;MySQL&apos;</span>],
                 {'\n'}

@@ -28,8 +28,8 @@ export function TechStack() {
             >
               <tech.icon
                 aria-hidden="true"
-                className="h-8 w-8 transition-transform duration-300 group-hover:scale-110"
-                style={{ color: tech.color }}
+                className="h-8 w-8 transition-all duration-300 group-hover:scale-110 group-hover:drop-shadow-lg animate-[float_4s_ease-in-out_infinite]"
+                style={{ color: tech.color, animationDelay: `${index * 150}ms` }}
               />
               <span className="text-sm font-medium text-paper-text dark:text-ink-text">
                 {tech.name}

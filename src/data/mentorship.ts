@@ -12,31 +12,18 @@ export const mentorshipProjects: MentorshipProject[] = [
   {
     title: 'JU Bot',
     description:
-      'AI-powered conversational assistant serving 2,000+ JECRC University students — handling admissions, timetables, faculty contacts, and FAQs, reducing admin staff workload by 40%.',
+      'AI-powered conversational assistant deployed on the JU Application Landing page — providing instant answers to student inquiries regarding university details, colleges, courses, fee structures, and admission processes.',
     highlights: [
-      'Serves 2,000+ active student users within the university ecosystem',
-      'Handles 500+ daily queries, reducing repetitive admin staff workload by 40%',
-      'Natural language understanding for 50+ university FAQ categories',
-      'Guided interns from architecture to deployment in 8 weeks',
+      'Integrated on the JU Application Landing page for instant student & applicant query resolution',
+      'Provides automated guidance on university info, colleges, available courses, fees, and admission steps',
+      'Handles 500+ daily applicant queries, reducing repetitive administrative workload by 40%',
+      'Guided interns through NLP intent modeling, knowledge integration, and deployment in 8 weeks',
     ],
-    tags: ['AI', 'Chatbot', 'Automation', 'NLP'],
+    tags: ['AI', 'Chatbot', 'Admissions', 'NLP'],
     gradient: 'from-brand-600 via-brand-500 to-cyan-400',
     accentColor: '#3D6BFD',
   },
-  {
-    title: 'AI-Powered HR Portal',
-    description:
-      'Recruitment automation platform that reduced resume screening time by 70% — parsing and ranking candidates against job requirements with AI-driven analysis across 100+ applications.',
-    highlights: [
-      'Cuts resume screening time by 70%, processing 100+ applications in minutes',
-      'AI-driven candidate ranking with relevance scoring against job descriptions',
-      'End-to-end workflow from application intake to interview scheduling',
-      'Mentored 2 interns through ML model integration and full-stack deployment',
-    ],
-    tags: ['AI', 'Automation', 'HR Tech', 'Resume Screening'],
-    gradient: 'from-indigo-600 via-brand-500 to-purple-400',
-    accentColor: '#818cf8',
-  },
+  
   {
     title: 'University Automation Initiatives',
     description:

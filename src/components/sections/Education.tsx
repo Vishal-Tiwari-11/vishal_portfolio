@@ -20,7 +20,7 @@ export function Education() {
           description="Formal education and continuous learning — from university to specialized courses in modern web development."
         />
 
-        <ol className="relative mt-12 flex flex-col gap-6 border-l border-paper-border pl-8 dark:border-ink-border sm:pl-10">
+        <ol className="relative mt-12 flex flex-col gap-6 border-l border-paper-border pl-6 dark:border-ink-border sm:pl-10">
           {education.map((item, index) => {
             const isOpen = openIndex === index;
 
@@ -30,12 +30,12 @@ export function Education() {
                 key={item.degree}
                 variant="fade-up"
                 delayMs={index * 100}
-                className="relative"
+                className="relative min-w-0"
               >
                 {/* Timeline dot */}
                 <span
                   aria-hidden="true"
-                  className={`absolute -left-[2.45rem] top-3 flex h-4 w-4 items-center justify-center rounded-full border-2 transition-colors duration-200 sm:-left-[2.95rem] ${
+                  className={`absolute -left-[1.95rem] top-3 flex h-4 w-4 items-center justify-center rounded-full border-2 transition-colors duration-200 sm:-left-[2.95rem] ${
                     isOpen
                       ? 'border-brand-500 bg-brand-500'
                       : 'border-brand-500 bg-paper-bg dark:bg-ink-bg'
@@ -51,22 +51,24 @@ export function Education() {
                   aria-expanded={isOpen}
                   className="group w-full text-left"
                 >
-                  <div className="flex items-start justify-between gap-4">
-                    <div>
+                  <div className="flex items-start justify-between gap-4 min-w-0">
+                    <div className="min-w-0 flex-1">
                       <p className="font-mono text-xs font-medium uppercase tracking-wider text-brand-500 dark:text-brand-400">
                         {item.period}
                       </p>
-                      <h3 className="mt-1 text-xl font-semibold text-paper-text transition-colors group-hover:text-brand-500 dark:text-ink-text dark:group-hover:text-brand-400">
+                      <h3 className="mt-1 text-lg font-semibold text-paper-text break-words transition-colors group-hover:text-brand-500 dark:text-ink-text dark:group-hover:text-brand-400 sm:text-xl">
                         {item.degree}
                       </h3>
-                      <p className="mt-1 flex items-center gap-2 text-sm font-medium text-paper-muted dark:text-ink-muted">
-                        <GraduationCap className="h-4 w-4 text-brand-500 dark:text-brand-400" aria-hidden="true" />
-                        {item.institution}
+                      <p className="mt-1 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm font-medium text-paper-muted break-words dark:text-ink-muted">
+                        <span className="inline-flex items-center gap-1.5">
+                          <GraduationCap className="h-4 w-4 flex-shrink-0 text-brand-500 dark:text-brand-400" aria-hidden="true" />
+                          <span>{item.institution}</span>
+                        </span>
                         {item.grade && (
-                          <>
+                          <span className="inline-flex items-center gap-1.5">
                             <span aria-hidden="true" className="text-paper-border dark:text-ink-border">·</span>
                             <span className="text-brand-500 dark:text-brand-400">Grade: {item.grade}</span>
-                          </>
+                          </span>
                         )}
                       </p>
                     </div>

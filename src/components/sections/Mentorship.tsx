@@ -17,18 +17,18 @@ function MentorshipCard({ project, index }: { project: (typeof mentorshipProject
         style={{ background: `linear-gradient(to right, ${project.accentColor}, transparent 70%)` }}
       />
 
-      <div className="flex flex-1 flex-col gap-4 p-5">
+      <div className="flex flex-1 flex-col gap-4 p-5 min-w-0">
         {/* Row: number + category label */}
-        <div className="flex items-center gap-2.5">
+        <div className="flex items-center gap-2.5 min-w-0">
           <span
-            className="font-mono text-2xl font-black leading-none tabular-nums"
+            className="font-mono text-2xl font-black leading-none tabular-nums flex-shrink-0"
             style={{ color: project.accentColor, opacity: 0.2 }}
             aria-hidden="true"
           >
             {num}
           </span>
           <span
-            className="rounded-full border px-2.5 py-0.5 font-mono text-[10px] font-semibold uppercase tracking-widest"
+            className="truncate rounded-full border px-2.5 py-0.5 font-mono text-[10px] font-semibold uppercase tracking-widest"
             style={{
               borderColor: `${project.accentColor}40`,
               color: project.accentColor,
@@ -40,12 +40,12 @@ function MentorshipCard({ project, index }: { project: (typeof mentorshipProject
         </div>
 
         {/* Title */}
-        <h3 className="text-lg font-semibold leading-snug text-paper-text transition-colors duration-200 group-hover:text-brand-500 dark:text-ink-text dark:group-hover:text-brand-400">
+        <h3 className="text-lg font-semibold leading-snug text-paper-text break-words transition-colors duration-200 group-hover:text-brand-500 dark:text-ink-text dark:group-hover:text-brand-400">
           {project.title}
         </h3>
 
         {/* Description — flex-1 pushes footer down */}
-        <p className="flex-1 text-sm leading-relaxed text-paper-muted dark:text-ink-muted">
+        <p className="flex-1 text-sm leading-relaxed text-paper-muted break-words dark:text-ink-muted">
           {project.description}
         </p>
 
@@ -122,7 +122,7 @@ export function Mentorship() {
     <section
       id="mentorship"
       aria-label="Mentorship projects"
-      className="scroll-mt-16 border-y border-paper-border bg-paper-surface py-24 dark:border-ink-border dark:bg-ink-surface"
+      className="scroll-mt-16 border-y border-paper-border bg-paper-elevated py-24 dark:border-ink-border dark:bg-ink-surface"
     >
       <div className="container-page">
         <SectionHeader
